@@ -11,11 +11,14 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState: {
         posts: [],
+        currentPost: {},
         loading: false,
         hasError: false
     },
     reducers: {
-
+        setCurrentPost: (state, action) => {
+            state.currentPost = action.payload;
+        }
     },
     extraReducers: {
       [fetchPosts.pending]: (state, action) => {
@@ -35,4 +38,6 @@ const postsSlice = createSlice({
 });
 
 export const selectPosts = state => state.posts.posts;
+export const selectCurrentPost = state => state.posts.currentPost;
+export const { setCurrentPost } = postsSlice.actions;
 export default postsSlice.reducer;

@@ -13,7 +13,13 @@ export default function Comments({ postId, subreddit }) {
 
     return (
         <>
-
+            {
+                comments.map(comment => (
+                    <div key={comment.id} className="container">
+                        <h4><b>{comment.body}</b></h4>
+                    </div>
+                ))
+            }
         </>
     )
 }
