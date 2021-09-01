@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Router>
         <Switch>
-          <Route path="/post/:postId">
+          <Route path="/post/:subreddit/:postId">
             <Post />
           </Route>
           <Route path="/">

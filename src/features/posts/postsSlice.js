@@ -25,7 +25,7 @@ const postsSlice = createSlice({
       [fetchPosts.fulfilled]: (state, action) => {
         state.loading = false;
         state.hasError = false;
-        state.posts = state.posts = (action.payload.map(d => d.data));
+        state.posts = (action.payload.map(d => d.data));
       },
       [fetchPosts.rejected]: (state, action) => {
         state.loading = false;

@@ -18,7 +18,7 @@ export default function Posts() {
             {
                 // for each posts add a new post element 
                 posts.map(post => (
-                    <Link key={post.id} to={`/post/${post.id}`}>
+                    <Link key={post.id} to={`/post/${post.subreddit}/${post.id}`}>
                         <div class="card">
                             {post.is_video && post.thumbnail !== 'nsfw' && (
                                 <video controls autoPlay loop muted>
