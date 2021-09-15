@@ -9,7 +9,7 @@ export default function Comments({ postId, subreddit }) {
 
     useEffect(() => {
         dispatch(fetchComments({postId, subreddit}));
-    }, []);
+    }, [dispatch, postId, subreddit]);
 
     return (
         <>

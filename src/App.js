@@ -8,13 +8,14 @@ import {
 import Header from './components/Header';
 import Posts from './features/posts/Posts';
 import Post from './features/posts/Post';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route path="/post/:subreddit/:postId">
             <Post />
@@ -24,6 +25,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer/>
     </div>
   );
 }

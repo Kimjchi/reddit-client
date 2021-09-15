@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #DAE0E6;
+  height: 100%;
 }
 
 .App-logo {
@@ -17,7 +19,16 @@
   font-size: calc(10px + 2vmin);
 }
 
-header {
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+header .header-content {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 5px;
   display: inline-flex;
@@ -27,6 +38,16 @@ header {
   top: 0;
   left: 0;
   background-color: white;
+}
+
+footer {
+  box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
+  padding: 5px 0;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  margin-top: 5px;
 }
 
 .little-quote {
